@@ -48,6 +48,8 @@ jobs:
       - name: Generate new md
         run: |
           source venv/bin/activate
+          echo ${{ github.repository }} 
+          echo ${{ GITHUB_REPOSITORY }} 
           python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
 
       - name: Push README
