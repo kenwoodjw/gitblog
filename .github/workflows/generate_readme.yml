@@ -14,7 +14,7 @@ on:
 
 env:
   GITHUB_NAME: kenwoodjw
-  GITHUB_EMAIL: blackxin55+@gmail.com
+  GITHUB_EMAIL: blackxin55@gmail.com
 
 jobs:
   sync:
