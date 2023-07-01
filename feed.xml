@@ -1,3 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2023-07-01T10:51:55.448086+00:00</updated><author><name>kenwoodjw</name><email>blackxin55+@gmail.com</email></author><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2023-07-01T10:51:55.808131+00:00</updated><content type="html"><![CDATA[<h3>步骤一 fork 仓库</h3>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2023-07-01T11:06:30.037452+00:00</updated><author><name>kenwoodjw</name><email>blackxin55+@gmail.com</email></author><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2023-07-01T11:06:30.466519+00:00</updated><content type="html"><![CDATA[<ol>
+<li>
+<p>fork 仓库</p>
+</li>
+<li>
+<p>修改github action的用户名和邮箱</p>
+</li>
+<li>
+<p>创建secret
+<img src="https://github.com/kenwoodjw/gitblog/assets/10386710/64a1f874-9b88-405c-bc7c-5f3297b8faa2" alt="image" /></p>
+</li>
+<li>
+<p>设置action权限和secret
+<strong>tips</strong> : 是Repository secrets，不是environment secrets，配错踩坑了
+<img src="https://github.com/kenwoodjw/gitblog/assets/10386710/f7cd4c17-fd7b-415d-9e9a-327aa7a8e13b" alt="image" />
+要勾选read and write权限，不然提示403
+<img src="https://github.com/kenwoodjw/gitblog/assets/10386710/fa229d08-0121-4991-9707-e904a11e7991" alt="image" /></p>
+</li>
+<li>
+<p>开启issue权限
+<img src="https://github.com/kenwoodjw/gitblog/assets/10386710/a53d3de4-f944-4905-8103-c8d8d8e7d8f5" alt="image" />
+往下拉，勾选issue
+<img src="https://github.com/kenwoodjw/gitblog/assets/10386710/66486b80-27f7-4852-a9f8-b227f2724091" alt="image" /></p>
+</li>
+</ol>
 ]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/1" rel="alternate"/><category term="测试"/><published>2023-07-01T09:34:22+00:00</published></entry></feed>
