@@ -6,5 +6,5 @@ My personal blog using issues and GitHub Actions (随意转载，无需署名)
  | ---- | ---- | ---- |
 ## 最近更新
 - [如何fork yihong的gitblog](https://github.com/kenwoodjw/gitblog/issues/1)--2023-07-01
-## 测试
+## 技术文章
 - [如何fork yihong的gitblog](https://github.com/kenwoodjw/gitblog/issues/1)--2023-07-01

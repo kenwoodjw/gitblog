@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2023-07-01T11:06:30.037452+00:00</updated><author><name>kenwoodjw</name><email>blackxin55+@gmail.com</email></author><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2023-07-01T11:06:30.466519+00:00</updated><content type="html"><![CDATA[<ol>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2023-07-02T02:29:43.902538+00:00</updated><author><name>kenwoodjw</name><email>blackxin55+@gmail.com</email></author><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2023-07-02T02:29:44.166432+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p>fork 仓库</p>
 </li>
@@ -24,4 +24,4 @@
 <img src="https://github.com/kenwoodjw/gitblog/assets/10386710/66486b80-27f7-4852-a9f8-b227f2724091" alt="image" /></p>
 </li>
 </ol>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/1" rel="alternate"/><category term="测试"/><published>2023-07-01T09:34:22+00:00</published></entry></feed>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/1" rel="alternate"/><category term="技术文章"/><published>2023-07-01T09:34:22+00:00</published></entry></feed>
