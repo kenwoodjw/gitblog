@@ -1,6 +1,5 @@
 ## [Gitblog](https://yihong0618.github.io/gitblog/)
-My personal blog([About Me](https://github.com/yihong0618/gitblog/issues/282)) using issues and GitHub Actions (随意转载，无需署名)
-[RSS Feed](https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml)
+Reference By yihong0618 ([About Him](https://github.com/yihong0618/gitblog/issues/282)) using issues and GitHub Actions (随意转载，无需署名)
 
 ## [友情链接](https://github.com/kenwoodjw/gitblog/issues/2)
 <details><summary>显示</summary>
