@@ -1,12 +1,64 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2023-07-07T16:21:15.669261+00:00</updated><author><name>kenwoodjw</name><email>blackxin55+@gmail.com</email></author><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/3</id><title>纪念黄家驹！</title><updated>2023-07-07T16:21:15.998702+00:00</updated><content type="html"><![CDATA[<p>6月30号是黄家驹逝世30周年，看了b站的<a href="https://m.bilibili.com/video/BV1or4y1D7Di?buvid=Z440AE4D1ACEEB7847FF97E59B07FC38AC45&amp;is_story_h5=false&amp;mid=2nnD0%2BnOUbZ1zyEL%2BGZOUA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=99C2892E-ED9E-4188-958A-1F625A988C97&amp;share_source=WEIXIN_MONMENT&amp;share_tag=s_i&amp;timestamp=1688130684&amp;unique_k=Um2hElv&amp;up_id=2142655487">1991Beyond生命接触演唱会</a>, 以此缅怀他。家驹永远活在31岁，然而我今年刚好31岁了！当意识到这个问题时, 当明天意外来临的时候，我能留下什么属于我的痕迹。今年一直关注很久的皓叔，也意外走了。真的让人感叹生命的无常。所以也就有了gitblog这个仓库，尝试着记录下半年，记录一些什么！</p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/3" rel="alternate"/><published>2023-07-04T14:51:23+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/2</id><title>友情链接</title><updated>2023-07-07T16:21:16.204634+00:00</updated><content type="html"><![CDATA[<p>这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2024-03-22T07:19:48.715168+00:00</updated><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/4</id><title>如何搭建一套内部的devops流程</title><updated>2024-03-22T07:19:48.900322+00:00</updated><content type="html"><![CDATA[<h1>工具选型</h1>
+<ul>
+<li>代码仓库: gitlab</li>
+<li>持续集成: jenkins</li>
+<li>镜像仓库: harbor</li>
+<li>maven仓库，npm仓库: nexus</li>
+<li>堡垒机: jumpserver</li>
+<li>日志查询: grafana</li>
+<li>文件存储: minio</li>
+<li>http网关: apisix</li>
+<li>文档中心: wiki</li>
+<li>文档归档: nextcloud</li>
+<li>代码质量: sonarqube</li>
+<li>需求bug流程： 禅道社区版</li>
+<li>监控: prometheus, uptime kuma</li>
+</ul>
+<h1>gitflow 制定</h1>
+<p><img src="https://github.com/kenwoodjw/gitblog/assets/10386710/dea138e9-aade-4e2f-9bb7-4031fd1e36ba" alt="GitFlow工作流" /></p>
+<h1>CI/CD</h1>
+<p>jenkins开启gitlab账号认证，使用jenkins 构建jar包，systemd启动jar包，profile文件注入中间件等环境变量信息</p>
+<pre><code>[Unit]
+Description=$directory.service
+After=syslog.target
+
+[Service]
+User=root
+Type=simple
+EnvironmentFile=$server_dir/profile
+ExecStart=/bin/sh -c &quot;java \$JAVA_OPTS -Xmx1024m -Xms1024m -Dfile.encoding=utf-8 -Dfastjson.parser.safeMode=true -Dfastjson.parser.autoTypeSupport=false -jar $server_dir/$directory/xx.jar&quot;
+ExecReload=/bin/kill -s HUP
+SuccessExitStatus=143
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+</code></pre>
+<h1>配置中心</h1>
+<p>使用nacos，和开发约定中间件的变量名名称，包含url，username，password,</p>
+<pre><code class="language-sh">## profile文件内容
+NACOS_URL=xx
+NACOS_NAMESPACE=xx
+NACOS_USERNAME=xx
+NACOS_PASSWORD=xx
+</code></pre>
+<h1>数据库</h1>
+<p>使用数据库迁移工具 <a href="https://github.com/golang-migrate/migrate%EF%BC%8C">https://github.com/golang-migrate/migrate，</a> 这个工具可以让sql有版本管理，进行升级和回滚</p>
+<h1>日志</h1>
+<p>使用promtail采集systemd日志，发送到loki，grafana使用gitlab认证，这样研发只需要一套gitlab账号就可以</p>
+<h1>代码扫描</h1>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/4"/><category term="help wanted"/><category term="技术文章"/><published>2024-02-22T15:48:30+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/3</id><title>纪念黄家驹！</title><updated>2024-03-22T07:19:49.004058+00:00</updated><content type="html"><![CDATA[<p>6月30号是黄家驹逝世30周年，看了b站的<a href="https://m.bilibili.com/video/BV1or4y1D7Di?buvid=Z440AE4D1ACEEB7847FF97E59B07FC38AC45&amp;is_story_h5=false&amp;mid=2nnD0%2BnOUbZ1zyEL%2BGZOUA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=99C2892E-ED9E-4188-958A-1F625A988C97&amp;share_source=WEIXIN_MONMENT&amp;share_tag=s_i&amp;timestamp=1688130684&amp;unique_k=Um2hElv&amp;up_id=2142655487">1991Beyond生命接触演唱会</a>, 以此缅怀他。家驹永远活在31岁，然而我今年刚好31岁了！当意识到这个问题时, 当明天意外来临的时候，我能留下什么属于我的痕迹。今年一直关注很久的皓叔，也意外走了。真的让人感叹生命的无常。所以也就有了gitblog这个仓库，尝试着记录下半年，记录一些什么！</p>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/3"/><category term="杂谈"/><published>2023-07-04T14:51:23+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/2</id><title>友情链接</title><updated>2024-03-22T07:19:49.113316+00:00</updated><content type="html"><![CDATA[<p>这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。</p>
 <p>格式如下（请参考我下面的 comment）:
 冒号为中文冒号 ：</p>
 <p>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx</p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/2" rel="alternate"/><category term="Friends"/><published>2023-07-02T03:06:59+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2023-07-07T16:21:16.362034+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/2"/><category term="Friends"/><published>2023-07-02T03:06:59+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2024-03-22T07:19:49.215743+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p>fork 仓库</p>
 </li>
@@ -31,4 +83,4 @@
 <img src="https://github.com/kenwoodjw/gitblog/assets/10386710/66486b80-27f7-4852-a9f8-b227f2724091" alt="image" /></p>
 </li>
 </ol>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/1" rel="alternate"/><category term="技术文章"/><published>2023-07-01T09:34:22+00:00</published></entry></feed>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/1"/><category term="技术文章"/><published>2023-07-01T09:34:22+00:00</published></entry></feed>
