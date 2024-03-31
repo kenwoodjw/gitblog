@@ -22,12 +22,11 @@ Reference By yihong0618 ([About Him](https://github.com/yihong0618/gitblog/issue
 
 
 ## 最近更新
+- [英伟达用到的技术！](https://github.com/kenwoodjw/gitblog/issues/5)--2024-03-31
 - [如何搭建一套内部的devops流程](https://github.com/kenwoodjw/gitblog/issues/4)--2024-02-22
 - [纪念黄家驹！](https://github.com/kenwoodjw/gitblog/issues/3)--2023-07-04
 - [友情链接](https://github.com/kenwoodjw/gitblog/issues/2)--2023-07-02
 - [如何fork yihong的gitblog](https://github.com/kenwoodjw/gitblog/issues/1)--2023-07-01
-## help wanted
-- [如何搭建一套内部的devops流程](https://github.com/kenwoodjw/gitblog/issues/4)--2024-02-22
 ## 技术文章
 - [如何搭建一套内部的devops流程](https://github.com/kenwoodjw/gitblog/issues/4)--2024-02-22
 - [如何fork yihong的gitblog](https://github.com/kenwoodjw/gitblog/issues/1)--2023-07-01
