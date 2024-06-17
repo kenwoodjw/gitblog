@@ -1,10 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2024-04-05T07:46:52.074520+00:00</updated><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/5</id><title>英伟达用到的技术！</title><updated>2024-04-05T07:46:52.400257+00:00</updated><content type="html"><![CDATA[<h3>英伟达用到的技术概念科普</h3>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2024-06-17T16:39:27.707617+00:00</updated><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/6</id><title>Kubernetes网络</title><updated>2024-06-17T16:39:28.057478+00:00</updated><content type="html"><![CDATA[<h3>常见术语</h3>
+<ul>
+<li>第2层网络: OSI模型的“数据链&quot;层.</li>
+<li>第3层网络: OSI模型的”网络&quot; 层，IPv4,IPv6,ICMP</li>
+<li>VXLAN: VLAN仅限于4096个网络ID，VXLAN用于在UDP数据包中封装第2层以太网帧帮助实现大型云部署，VXLAN是一种overlay协议</li>
+<li>overlay网络: 建立在现有网络之上的虚拟逻辑网络，用于现有网络之上提供有用的抽象，并分离和保护不同的逻辑网络</li>
+<li>封装: 是指在附加层中封装网络数据包以提供其他上下文和信息的过程。在overlay网络中，封装被用于从虚拟网络转换到底层地址空间，从而能路由到不同位置</li>
+<li>网状网络: 每个节点连接到许多其他节点已协作路由，并实现更大连接的网络</li>
+<li>BGP: 边界网关协议，用于管理边缘路由器之间数据包的路由方式，BGP通过考虑可用路径，路由规则和特定网络策略等因素，将数据包从一个网络发送到另一个网络</li>
+</ul>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/6"/><category term="k8s"/><category term="network"/><published>2024-06-17T16:32:54+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/5</id><title>英伟达用到的技术！</title><updated>2024-06-17T16:39:28.240293+00:00</updated><content type="html"><![CDATA[<h3>英伟达用到的技术概念科普</h3>
 <h4>NVlink</h4>
 <h4>NvSwitch</h4>
 <h4>MIG</h4>
 <h4>cuda</h4>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/5"/><published>2024-03-31T08:43:15+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/4</id><title>如何搭建一套内部的devops流程</title><updated>2024-04-05T07:46:52.566338+00:00</updated><content type="html"><![CDATA[<h1>工具选型</h1>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/5"/><published>2024-03-31T08:43:15+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/4</id><title>如何搭建一套内部的devops流程</title><updated>2024-06-17T16:39:28.415997+00:00</updated><content type="html"><![CDATA[<h1>工具选型</h1>
 <ul>
 <li>代码仓库: gitlab</li>
 <li>持续集成: jenkins</li>
@@ -56,14 +66,14 @@ NACOS_PASSWORD=xx
 <h1>日志</h1>
 <p>使用promtail采集systemd日志，发送到loki，grafana使用gitlab认证，这样研发只需要一套gitlab账号就可以</p>
 <h1>代码扫描</h1>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/4"/><category term="技术文章"/><published>2024-02-22T15:48:30+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/3</id><title>纪念黄家驹！</title><updated>2024-04-05T07:46:52.736662+00:00</updated><content type="html"><![CDATA[<p>6月30号是黄家驹逝世30周年，看了b站的<a href="https://m.bilibili.com/video/BV1or4y1D7Di?buvid=Z440AE4D1ACEEB7847FF97E59B07FC38AC45&amp;is_story_h5=false&amp;mid=2nnD0%2BnOUbZ1zyEL%2BGZOUA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=99C2892E-ED9E-4188-958A-1F625A988C97&amp;share_source=WEIXIN_MONMENT&amp;share_tag=s_i&amp;timestamp=1688130684&amp;unique_k=Um2hElv&amp;up_id=2142655487">1991Beyond生命接触演唱会</a>, 以此缅怀他。家驹永远活在31岁，然而我今年刚好31岁了！当意识到这个问题时, 当明天意外来临的时候，我能留下什么属于我的痕迹。今年一直关注很久的皓叔，也意外走了。真的让人感叹生命的无常。所以也就有了gitblog这个仓库，尝试着记录下半年，记录一些什么！</p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/3"/><category term="杂谈"/><published>2023-07-04T14:51:23+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/2</id><title>友情链接</title><updated>2024-04-05T07:46:52.902922+00:00</updated><content type="html"><![CDATA[<p>这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。</p>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/4"/><category term="技术文章"/><published>2024-02-22T15:48:30+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/3</id><title>纪念黄家驹！</title><updated>2024-06-17T16:39:28.586502+00:00</updated><content type="html"><![CDATA[<p>6月30号是黄家驹逝世30周年，看了b站的<a href="https://m.bilibili.com/video/BV1or4y1D7Di?buvid=Z440AE4D1ACEEB7847FF97E59B07FC38AC45&amp;is_story_h5=false&amp;mid=2nnD0%2BnOUbZ1zyEL%2BGZOUA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=99C2892E-ED9E-4188-958A-1F625A988C97&amp;share_source=WEIXIN_MONMENT&amp;share_tag=s_i&amp;timestamp=1688130684&amp;unique_k=Um2hElv&amp;up_id=2142655487">1991Beyond生命接触演唱会</a>, 以此缅怀他。家驹永远活在31岁，然而我今年刚好31岁了！当意识到这个问题时, 当明天意外来临的时候，我能留下什么属于我的痕迹。今年一直关注很久的皓叔，也意外走了。真的让人感叹生命的无常。所以也就有了gitblog这个仓库，尝试着记录下半年，记录一些什么！</p>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/3"/><category term="杂谈"/><published>2023-07-04T14:51:23+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/2</id><title>友情链接</title><updated>2024-06-17T16:39:28.755731+00:00</updated><content type="html"><![CDATA[<p>这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。</p>
 <p>格式如下（请参考我下面的 comment）:
 冒号为中文冒号 ：</p>
 <p>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx</p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/2"/><category term="Friends"/><published>2023-07-02T03:06:59+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2024-04-05T07:46:53.068509+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/2"/><category term="Friends"/><published>2023-07-02T03:06:59+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2024-06-17T16:39:28.923229+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p>fork 仓库</p>
 </li>
