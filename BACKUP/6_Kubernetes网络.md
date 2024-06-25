@@ -1,5 +1,6 @@
 # [Kubernetes网络](https://github.com/kenwoodjw/gitblog/issues/6)
 
+
 ### 常见术语
 
 - 第2层网络: OSI模型的“数据链"层.
@@ -50,3 +51,5 @@ ip netns exec blue ip link set veth-blue up
 ip netns exec red ping 192.168.1.2
 ip netns exec blue ping 192.168.1.1
 ```
+![veth-pair](https://github.com/kenwoodjw/gitblog/assets/10386710/da132fa8-b9cc-43f6-85a1-3ebdcda8617b)
+
