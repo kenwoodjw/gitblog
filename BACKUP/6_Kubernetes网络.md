@@ -1,6 +1,5 @@
 # [Kubernetes网络](https://github.com/kenwoodjw/gitblog/issues/6)
 
-
 ### 常见术语
 
 - 第2层网络: OSI模型的“数据链"层.
