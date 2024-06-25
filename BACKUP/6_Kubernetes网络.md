@@ -3,7 +3,7 @@
 ### 常见术语
 
 - 第2层网络: OSI模型的“数据链"层.
-- 第3层网络: OSI模型的”网络" 层，IPv4,IPv6,ICMP
+- 第3层网络: OSI模型的”网络" 层，IPv4,IPv6,ICMP
 - VXLAN: VLAN仅限于4096个网络ID，VXLAN用于在UDP数据包中封装第2层以太网帧帮助实现大型云部署，VXLAN是一种overlay协议
 - overlay网络: 建立在现有网络之上的虚拟逻辑网络，用于现有网络之上提供有用的抽象，并分离和保护不同的逻辑网络
 - 封装: 是指在附加层中封装网络数据包以提供其他上下文和信息的过程。在overlay网络中，封装被用于从虚拟网络转换到底层地址空间，从而能路由到不同位置
@@ -19,4 +19,12 @@
  ip netns add red
  ip netns add blue
  ip netns
+```
+- 在network namespace中执行命令
+```sh
+ip netns exec red ip link = ip -n red link
+# 查看arp
+ip netns exec red arp
+# 如果提示没有arp命令
+ip netns exec red ip neighbor
 ```
