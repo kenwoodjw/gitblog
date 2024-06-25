@@ -28,3 +28,25 @@ ip netns exec red arp
 # 如果提示没有arp命令
 ip netns exec red ip neighbor
 ```
+
+- 创建 veth pair 的用途：将 veth pair 的一端放置在一个命名空间中，另一端放置在另一个命名空间中，从而实现这两个命名空间之间的通信。
+```sh
+# 创建网络命名空间
+ip netns add red
+ip netns add blue
+# 创建 veth pair
+ip link add veth-red type veth peer name veth-blue
+# 将 veth-red 接口移动到 red 命名空间
+ip link set veth-red netns red
+# 将 veth-blue 接口移动到 blue 命名空间
+ip link set veth-blue netns blue
+# 在 red 命名空间中配置 veth-red 接口
+ip netns exec red ip addr add 192.168.1.1/24 dev veth-red
+ip netns exec red ip link set veth-red up
+# 在 blue 命名空间中配置 veth-blue 接口
+ip netns exec blue ip addr add 192.168.1.2/24 dev veth-blue
+ip netns exec blue ip link set veth-blue up
+# 验证配置
+ip netns exec red ping 192.168.1.2
+ip netns exec blue ping 192.168.1.1
+```
