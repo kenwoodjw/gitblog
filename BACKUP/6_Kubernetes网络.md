@@ -52,3 +52,7 @@ ip netns exec blue ping 192.168.1.1
 ```
 ![veth-pair](https://github.com/kenwoodjw/gitblog/assets/10386710/da132fa8-b9cc-43f6-85a1-3ebdcda8617b)
 
+-  问题: 如果有多个network namespace，如何连接它们
+- 答案: 创建一个虚拟网络，为了创建虚拟网络，我们需要一个虚拟交换机(switch）
+- 解决方案: linux bridge, OpenvSwitch
+- 
