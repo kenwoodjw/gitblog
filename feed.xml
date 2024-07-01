@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2024-07-01T08:42:26.205610+00:00</updated><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/6</id><title>Kubernetes网络</title><updated>2024-07-01T08:42:26.525185+00:00</updated><content type="html"><![CDATA[<h3>常见术语</h3>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/kenwoodjw/gitblog</id><title>RSS feed of kenwoodjw's gitblog</title><updated>2024-07-01T09:17:25.448582+00:00</updated><link href="https://github.com/kenwoodjw/gitblog"/><link href="https://raw.githubusercontent.com/kenwoodjw/gitblog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="1.0.0">python-feedgen</generator><entry><id>https://github.com/kenwoodjw/gitblog/issues/6</id><title>Kubernetes网络</title><updated>2024-07-01T09:17:25.663096+00:00</updated><content type="html"><![CDATA[<h3>常见术语</h3>
 <ul>
 <li>第2层网络: OSI模型的“数据链&quot;层.</li>
 <li>第3层网络: OSI模型的”网络&quot; 层，IPv4,IPv6,ICMP</li>
@@ -92,12 +92,15 @@ ip netns exec blue ip link set veth-blue up
 ip netns exec red ping 192.168.1.2
 </code></pre>
 <p><img src="https://github.com/kenwoodjw/gitblog/assets/10386710/87909aee-0342-4006-b369-6a1a59103fe7" alt="br0" /></p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/6"/><category term="k8s"/><category term="network"/><published>2024-06-17T16:32:54+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/5</id><title>英伟达用到的技术！</title><updated>2024-07-01T08:42:26.721415+00:00</updated><content type="html"><![CDATA[<h3>英伟达用到的技术概念科普</h3>
+<ul>
+<li><a href="https://blog.devops.dev/prerequisites-networking-in-kubernetes-cc04c781fe1f">refer</a></li>
+</ul>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/6"/><category term="k8s"/><category term="network"/><published>2024-06-17T16:32:54+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/5</id><title>英伟达用到的技术！</title><updated>2024-07-01T09:17:25.762501+00:00</updated><content type="html"><![CDATA[<h3>英伟达用到的技术概念科普</h3>
 <h4>NVlink</h4>
 <h4>NvSwitch</h4>
 <h4>MIG</h4>
 <h4>cuda</h4>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/5"/><published>2024-03-31T08:43:15+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/4</id><title>如何搭建一套内部的devops流程</title><updated>2024-07-01T08:42:26.880239+00:00</updated><content type="html"><![CDATA[<h1>工具选型</h1>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/5"/><published>2024-03-31T08:43:15+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/4</id><title>如何搭建一套内部的devops流程</title><updated>2024-07-01T09:17:25.872486+00:00</updated><content type="html"><![CDATA[<h1>工具选型</h1>
 <ul>
 <li>代码仓库: gitlab</li>
 <li>持续集成: jenkins</li>
@@ -149,14 +152,14 @@ NACOS_PASSWORD=xx
 <h1>日志</h1>
 <p>使用promtail采集systemd日志，发送到loki，grafana使用gitlab认证，这样研发只需要一套gitlab账号就可以</p>
 <h1>代码扫描</h1>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/4"/><category term="技术文章"/><published>2024-02-22T15:48:30+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/3</id><title>纪念黄家驹！</title><updated>2024-07-01T08:42:27.040907+00:00</updated><content type="html"><![CDATA[<p>6月30号是黄家驹逝世30周年，看了b站的<a href="https://m.bilibili.com/video/BV1or4y1D7Di?buvid=Z440AE4D1ACEEB7847FF97E59B07FC38AC45&amp;is_story_h5=false&amp;mid=2nnD0%2BnOUbZ1zyEL%2BGZOUA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=99C2892E-ED9E-4188-958A-1F625A988C97&amp;share_source=WEIXIN_MONMENT&amp;share_tag=s_i&amp;timestamp=1688130684&amp;unique_k=Um2hElv&amp;up_id=2142655487">1991Beyond生命接触演唱会</a>, 以此缅怀他。家驹永远活在31岁，然而我今年刚好31岁了！当意识到这个问题时, 当明天意外来临的时候，我能留下什么属于我的痕迹。今年一直关注很久的皓叔，也意外走了。真的让人感叹生命的无常。所以也就有了gitblog这个仓库，尝试着记录下半年，记录一些什么！</p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/3"/><category term="杂谈"/><published>2023-07-04T14:51:23+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/2</id><title>友情链接</title><updated>2024-07-01T08:42:27.191525+00:00</updated><content type="html"><![CDATA[<p>这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。</p>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/4"/><category term="技术文章"/><published>2024-02-22T15:48:30+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/3</id><title>纪念黄家驹！</title><updated>2024-07-01T09:17:25.981704+00:00</updated><content type="html"><![CDATA[<p>6月30号是黄家驹逝世30周年，看了b站的<a href="https://m.bilibili.com/video/BV1or4y1D7Di?buvid=Z440AE4D1ACEEB7847FF97E59B07FC38AC45&amp;is_story_h5=false&amp;mid=2nnD0%2BnOUbZ1zyEL%2BGZOUA%3D%3D&amp;p=1&amp;plat_id=116&amp;share_from=ugc&amp;share_medium=iphone&amp;share_plat=ios&amp;share_session_id=99C2892E-ED9E-4188-958A-1F625A988C97&amp;share_source=WEIXIN_MONMENT&amp;share_tag=s_i&amp;timestamp=1688130684&amp;unique_k=Um2hElv&amp;up_id=2142655487">1991Beyond生命接触演唱会</a>, 以此缅怀他。家驹永远活在31岁，然而我今年刚好31岁了！当意识到这个问题时, 当明天意外来临的时候，我能留下什么属于我的痕迹。今年一直关注很久的皓叔，也意外走了。真的让人感叹生命的无常。所以也就有了gitblog这个仓库，尝试着记录下半年，记录一些什么！</p>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/3"/><category term="杂谈"/><published>2023-07-04T14:51:23+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/2</id><title>友情链接</title><updated>2024-07-01T09:17:26.078278+00:00</updated><content type="html"><![CDATA[<p>这个 Issue 是友情链接的 Issue, 如果你想加到友情链接里，请在这条 Issue 上评论，我打心后会自动加到友情链接里。感谢大家。</p>
 <p>格式如下（请参考我下面的 comment）:
 冒号为中文冒号 ：</p>
 <p>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx</p>
-]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/2"/><category term="Friends"/><published>2023-07-02T03:06:59+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2024-07-01T08:42:27.364345+00:00</updated><content type="html"><![CDATA[<ol>
+]]></content><link href="https://github.com/kenwoodjw/gitblog/issues/2"/><category term="Friends"/><published>2023-07-02T03:06:59+00:00</published></entry><entry><id>https://github.com/kenwoodjw/gitblog/issues/1</id><title>如何fork yihong的gitblog</title><updated>2024-07-01T09:17:26.181756+00:00</updated><content type="html"><![CDATA[<ol>
 <li>
 <p>fork 仓库</p>
 </li>

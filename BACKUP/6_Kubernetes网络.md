@@ -92,3 +92,5 @@ ip netns exec blue ip link set veth-blue up
 ip netns exec red ping 192.168.1.2
 ```
 ![br0](https://github.com/kenwoodjw/gitblog/assets/10386710/87909aee-0342-4006-b369-6a1a59103fe7)
+
+- [refer](https://blog.devops.dev/prerequisites-networking-in-kubernetes-cc04c781fe1f)
