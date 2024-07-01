@@ -55,4 +55,39 @@ ip netns exec blue ping 192.168.1.1
 -  问题: 如果有多个network namespace，如何连接它们
 - 答案: 创建一个虚拟网络，为了创建虚拟网络，我们需要一个虚拟交换机(switch）
 - 解决方案: linux bridge, OpenvSwitch
-- 
+- 使用linux bridge连接两个命名空间
+```
+# 创建网络命名空间
+ip netns add red
+ip netns add blue
+
+# 创建 veth-pair
+ip link add veth-red type veth peer name veth-red-br
+ip link add veth-blue type veth peer name veth-blue-br
+
+# 将 veth 移动到命名空间
+ip link set veth-red netns red
+ip link set veth-blue netns blue
+
+# 创建 bridge 设备
+ip link add name br0 type bridge
+
+# 将 veth 对端连接到 bridge
+ip link set veth-red-br master br0
+ip link set veth-blue-br master br0
+
+# 启用 bridge 和 veth 对端
+ip link set br0 up
+ip link set veth-red-br up
+ip link set veth-blue-br up
+
+# 在命名空间中配置 IP 地址并启用接口
+ip netns exec red ip addr add 192.168.1.1/24 dev veth-red
+ip netns exec red ip link set veth-red up
+
+ip netns exec blue ip addr add 192.168.1.2/24 dev veth-blue
+ip netns exec blue ip link set veth-blue up
+
+# 验证连接
+ip netns exec red ping 192.168.1.2
+```
